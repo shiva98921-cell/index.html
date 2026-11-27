@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivam Prajapati | .NET Developer Portfolio</title>
-    <meta name="description" content="Shivam Prajapati - Experienced .NET Developer with around 4 years in C#, ASP.NET Core, Microservices, and Azure Cloud. Building scalable enterprise solutions.">
+    <title>Shivam Prajapati | Sr. .NET Developer Portfolio</title>
+    <meta name="description" content="Shivam Prajapati - Results-driven .NET Developer with around 4.5 years of experience in C#, ASP.NET Core, Microservices, Azure Cloud, and AI-assisted development. Building scalable enterprise solutions. Immediate Joiner.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -166,6 +166,8 @@
         section:nth-child(2) { animation-delay: 0.2s; }
         section:nth-child(3) { animation-delay: 0.4s; }
         section:nth-child(4) { animation-delay: 0.6s; }
+        section:nth-child(5) { animation-delay: 0.8s; }
+        section:nth-child(6) { animation-delay: 1.0s; }
 
         @keyframes fadeInUp {
             to {
@@ -190,6 +192,13 @@
             flex: 1;
         }
 
+        .hero-tags {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
         .hero-tag {
             display: inline-block;
             padding: 0.5rem 1.2rem;
@@ -199,9 +208,14 @@
             color: var(--accent-primary);
             font-size: 0.9rem;
             font-weight: 600;
-            margin-bottom: 1.5rem;
             font-family: 'JetBrains Mono', monospace;
             animation: pulse 2s ease-in-out infinite;
+        }
+
+        .hero-tag--green {
+            background: rgba(74, 222, 128, 0.1);
+            border-color: rgba(74, 222, 128, 0.4);
+            color: #4ade80;
         }
 
         @keyframes pulse {
@@ -540,6 +554,15 @@
             font-weight: bold;
         }
 
+        .timeline-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.2rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -616,6 +639,65 @@
             border-radius: 20px;
             font-size: 0.8rem;
             color: var(--accent-secondary);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .education-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .education-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-tech);
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 212, 255, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.2);
+        }
+
+        .education-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .education-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .education-card .education-degree {
+            font-size: 1.1rem;
+            color: var(--accent-primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-card .education-year {
+            font-size: 0.95rem;
+            color: var(--text-muted);
             font-family: 'JetBrains Mono', monospace;
         }
 
@@ -703,6 +785,10 @@
                 align-items: center;
             }
 
+            .hero-tags {
+                justify-content: center;
+            }
+
             nav ul {
                 gap: 1.5rem;
             }
@@ -750,6 +836,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -758,11 +845,14 @@
     <main>
         <section id="home" class="hero container">
             <div class="hero-content">
-                <span class="hero-tag">🚀 OPEN TO OPPORTUNITIES</span>
+                <div class="hero-tags">
+                    <span class="hero-tag">🚀 OPEN TO OPPORTUNITIES</span>
+                    <span class="hero-tag hero-tag--green">✅ IMMEDIATE JOINER</span>
+                </div>
                 <h1>Shivam Prajapati</h1>
-                <h2>.NET Developer & Software Engineer</h2>
-                <p>Transforming business challenges into elegant technical solutions. Specialized in building scalable, high-performance enterprise applications with around 4 years of hands-on expertise in C#, .NET Core, and cloud technologies.</p>
-                
+                <h2>Sr. .NET Developer & Software Engineer</h2>
+                <p>Results-driven .NET Developer with around 4.5 years of experience building enterprise-grade web applications and RESTful APIs. Proficient in C#, .NET Core, Microservices, and Azure Cloud — with hands-on AI-assisted development using GitHub Copilot, Cursor & Claude.</p>
+
                 <div class="cta-buttons">
                     <a href="#contact" class="btn btn-primary">💬 Get In Touch</a>
                     <a href="#projects" class="btn btn-secondary">👁️ View Projects</a>
@@ -779,16 +869,17 @@
                         <div class="code-line"><span class="code-keyword">public class</span> <span class="code-function">Developer</span></div>
                         <div class="code-line">{</div>
                         <div class="code-line">    <span class="code-keyword">string</span> Name = <span class="code-string">"Shivam Prajapati"</span>;</div>
-                        <div class="code-line">    <span class="code-keyword">string</span> Role = <span class="code-string">".NET Developer"</span>;</div>
-                        <div class="code-line">    <span class="code-keyword">int</span> YearsOfExperience = <span class="code-string">4</span>;</div>
-                        <div class="code-line">    <span class="code-keyword">string</span> Company = <span class="code-string">"SculpSoft"</span>;</div>
+                        <div class="code-line">    <span class="code-keyword">string</span> Role = <span class="code-string">"Sr. .NET Developer"</span>;</div>
+                        <div class="code-line">    <span class="code-keyword">double</span> YearsOfExp = <span class="code-string">4.5</span>;</div>
+                        <div class="code-line">    <span class="code-keyword">string</span> Company = <span class="code-string">"Mobifly"</span>;</div>
                         <div class="code-line">    <span class="code-keyword">string[]</span> Expertise = {</div>
                         <div class="code-line">        <span class="code-string">"C# & .NET Core"</span>,</div>
                         <div class="code-line">        <span class="code-string">"Microservices"</span>,</div>
-                        <div class="code-line">        <span class="code-string">"Azure Cloud"</span>,</div>
-                        <div class="code-line">        <span class="code-string">"API Development"</span></div>
+                        <div class="code-line">        <span class="code-string">"Azure & AWS Cloud"</span>,</div>
+                        <div class="code-line">        <span class="code-string">"RESTful APIs"</span>,</div>
+                        <div class="code-line">        <span class="code-string">"AI-Assisted Dev"</span></div>
                         <div class="code-line">    };</div>
-                        <div class="code-line">    <span class="code-keyword">bool</span> Passionate = <span class="code-string">true</span>;</div>
+                        <div class="code-line">    <span class="code-keyword">bool</span> ImmediateJoiner = <span class="code-string">true</span>;</div>
                         <div class="code-line">}</div>
                     </div>
                 </div>
@@ -799,7 +890,7 @@
             <div class="section-header">
                 <span class="section-tag">TECHNICAL EXPERTISE</span>
                 <h2>Skills & Technologies</h2>
-                <p>A comprehensive toolkit for building modern, scalable applications</p>
+                <p>A comprehensive toolkit for building modern, scalable enterprise applications</p>
             </div>
             <div class="skills-grid">
                 <div class="skill-card">
@@ -809,7 +900,10 @@
                         <span class="tag">C#</span>
                         <span class="tag">SQL</span>
                         <span class="tag">JavaScript</span>
-                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">jQuery</span>
                     </div>
                 </div>
                 <div class="skill-card">
@@ -819,9 +913,23 @@
                         <span class="tag">.NET Core</span>
                         <span class="tag">ASP.NET MVC</span>
                         <span class="tag">Entity Framework</span>
+                        <span class="tag">Blazor</span>
                         <span class="tag">Web API</span>
                         <span class="tag">ADO.NET</span>
                         <span class="tag">Microservices</span>
+                        <span class="tag">NestJS</span>
+                        <span class="tag">Sequelize ORM</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Angular</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">jQuery</span>
+                        <span class="tag">HTML5/CSS3</span>
                     </div>
                 </div>
                 <div class="skill-card">
@@ -829,18 +937,33 @@
                     <h3>Database & Storage</h3>
                     <div class="skill-tags">
                         <span class="tag">SQL Server</span>
+                        <span class="tag">PostgreSQL</span>
                         <span class="tag">Stored Procedures</span>
                         <span class="tag">Views & Triggers</span>
-                        <span class="tag">Database Design</span>
+                        <span class="tag">Materialized Views</span>
+                        <span class="tag">Query Optimization</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">☁️</div>
+                    <h3>Cloud & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Microsoft Azure</span>
+                        <span class="tag">Azure DevOps</span>
+                        <span class="tag">Azure Service Bus</span>
+                        <span class="tag">AWS (EC2, Lambda, S3, RDS)</span>
+                        <span class="tag">CI/CD Pipelines</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">GitHub/GitLab</span>
+                        <span class="tag">SVN</span>
                     </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🛠️</div>
                     <h3>Development Tools</h3>
                     <div class="skill-tags">
-                        <span class="tag">Visual Studio</span>
-                        <span class="tag">Git/SVN</span>
-                        <span class="tag">Azure DevOps</span>
+                        <span class="tag">Visual Studio 2026</span>
+                        <span class="tag">Git</span>
                         <span class="tag">JIRA</span>
                         <span class="tag">Postman</span>
                         <span class="tag">Swagger UI</span>
@@ -851,6 +974,7 @@
                     <h3>API Integration</h3>
                     <div class="skill-tags">
                         <span class="tag">RESTful APIs</span>
+                        <span class="tag">JSON</span>
                         <span class="tag">Twilio</span>
                         <span class="tag">SendGrid</span>
                         <span class="tag">LogoDev API</span>
@@ -859,23 +983,23 @@
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🔒</div>
-                    <h3>Security & DevOps</h3>
+                    <h3>Security</h3>
                     <div class="skill-tags">
-                        <span class="tag">JWT</span>
+                        <span class="tag">JWT/OAuth</span>
                         <span class="tag">SQL Injection Prevention</span>
+                        <span class="tag">XSS Prevention</span>
                         <span class="tag">VAPT</span>
-                        <span class="tag">CI/CD Pipeline</span>
-                        <span class="tag">Azure Cloud</span>
                     </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🤖</div>
-                    <h3>AI Tools</h3>
+                    <h3>AI & Vibe Coding Tools</h3>
                     <div class="skill-tags">
-                        <span class="tag">ChatGPT</span>
                         <span class="tag">GitHub Copilot</span>
-                        <span class="tag">Claude</span>
-                        <span class="tag">Cursor</span>
+                        <span class="tag">Cursor IDE</span>
+                        <span class="tag">Claude Code</span>
+                        <span class="tag">ChatGPT</span>
+                        <span class="tag">Generative AI</span>
                     </div>
                 </div>
                 <div class="skill-card">
@@ -894,7 +1018,7 @@
                 <div class="achievement-card">
                     <div class="achievement-icon">🏆</div>
                     <h4>Performance Optimization</h4>
-                    <p>Improved application response time by 40%</p>
+                    <p>Improved Excel export performance via EPPlus → ClosedXML migration</p>
                 </div>
                 <div class="achievement-card">
                     <div class="achievement-icon">⚡</div>
@@ -904,12 +1028,12 @@
                 <div class="achievement-card">
                     <div class="achievement-icon">🔒</div>
                     <h4>Security Champion</h4>
-                    <p>Identified and resolved critical vulnerabilities</p>
+                    <p>Identified & remediated critical SQL injection & XSS vulnerabilities via VAPT</p>
                 </div>
                 <div class="achievement-card">
                     <div class="achievement-icon">🚀</div>
-                    <h4>Quick Learner</h4>
-                    <p>Rapidly mastered new technologies</p>
+                    <h4>Zero-Downtime Releases</h4>
+                    <p>Deployed Azure DevOps CI/CD pipelines ensuring uninterrupted production</p>
                 </div>
             </div>
         </section>
@@ -918,38 +1042,81 @@
             <div class="section-header">
                 <span class="section-tag">CAREER JOURNEY</span>
                 <h2>Professional Experience</h2>
-                <p>Around 4 years of delivering high-quality software solutions</p>
+                <p>Around 4.5 years of delivering high-quality enterprise software solutions</p>
             </div>
             <div class="timeline">
+                <!-- Role 1: Mobifly -->
                 <div class="timeline-item">
-                    <div class="timeline-date">May 2025 – Present</div>
+                    <div class="timeline-date">May 2026 – Sep 2026</div>
+                    <h3>Sr. Software Engineer</h3>
+                    <div class="timeline-company">Mobifly (Brainbox Network)</div>
+                    <ul>
+                        <li>Built a Resource Management System (OptiWise/GTRMS) using microservices architecture with dedicated services for Employee, Allocations, Projects, Skills, Workflow, Notifications, Marketplace & Reports</li>
+                        <li>Implemented complex SQL logic for resource availability, leave calculations, timesheet tracking, project budget computation and designation cost updates using PostgreSQL stored procedures & materialized views</li>
+                        <li>Designed frontend web interfaces with React and backend microservices using NestJS (Node.js + TypeScript) with Sequelize ORM and PostgreSQL</li>
+                        <li>Integrated Azure Service Bus for async inter-service messaging across microservices</li>
+                        <li>Built and enhanced features for resource allocation, requisitions, and project listing with conflict handling & appended capacity</li>
+                        <li>Contributed to WCGT data sync / role remapping and Azure Service Bus migration planning across services</li>
+                    </ul>
+                    <div class="timeline-tech">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">.NET Core</span>
+                        <span class="tech-tag">NestJS</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Azure Service Bus</span>
+                        <span class="tech-tag">Microservices</span>
+                    </div>
+                </div>
+                <!-- Role 2: SculpSoft -->
+                <div class="timeline-item">
+                    <div class="timeline-date">May 2025 – Mar 2026</div>
                     <h3>Software Engineer</h3>
                     <div class="timeline-company">SculpSoft Pvt. Ltd.</div>
                     <ul>
-                        <li>Architecting scalable enterprise applications using C#, .NET Core, and REST APIs for Fortune 500 clients</li>
-                        <li>Led migration from EPPlus to ClosedXML, improving Excel/CSV export performance by 35%</li>
-                        <li>Integrated LogoDev API for automated logo fetching, reducing manual work by 80%</li>
-                        <li>Implemented Live Transcription feature, enhancing user experience significantly</li>
-                        <li>Expert in third-party API integration (Twilio, SendGrid) enabling critical business workflows</li>
-                        <li>Designed session scheduling and email notification systems handling 10,000+ daily transactions</li>
-                        <li>Active Scrum team member delivering features on schedule in 2-week sprints</li>
-                        <li>Contributed to cloud-based deployment workflows on Azure ensuring 99.9% uptime</li>
+                        <li>Architected and delivered scalable microservices using C# and .NET Core for the Blitzz enterprise video collaboration platform</li>
+                        <li>Improved Excel/CSV report export performance by migrating from EPPlus to ClosedXML, reducing memory usage and eliminating licensing overhead</li>
+                        <li>Integrated LogoDev API to auto-fetch and attach company logos on domain creation, enhancing platform branding automation</li>
+                        <li>Added Live Transcription capabilities to video calls via Twilio APIs, enabling real-time accessibility features</li>
+                        <li>Owned end-to-end integrations with Twilio, SendGrid, and external business-workflow services, reducing manual touchpoints</li>
+                        <li>Deployed and monitored services using Azure DevOps CI/CD pipelines, ensuring zero-downtime releases</li>
+                        <li>Leveraged AI-assisted coding tools (GitHub Copilot, Cursor, Claude) to accelerate feature development & code review cycles</li>
                     </ul>
+                    <div class="timeline-tech">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">ASP.NET Core</span>
+                        <span class="tech-tag">Web API</span>
+                        <span class="tech-tag">SQL Server</span>
+                        <span class="tech-tag">Twilio</span>
+                        <span class="tech-tag">SendGrid</span>
+                        <span class="tech-tag">Azure DevOps</span>
+                        <span class="tech-tag">Microservices</span>
+                    </div>
                 </div>
+                <!-- Role 3: Netsmartz -->
                 <div class="timeline-item">
-                    <div class="timeline-date">April 2022 – April 2025</div>
+                    <div class="timeline-date">Apr 2022 – Apr 2025</div>
                     <h3>Jr. Software Engineer</h3>
                     <div class="timeline-company">Netsmartz IT Solutions Pvt. Ltd.</div>
                     <ul>
-                        <li>Developed enterprise web applications using C#, ASP.NET MVC, and .NET Core for diverse industries</li>
-                        <li>Designed complex SQL Server databases with optimized stored procedures serving millions of records</li>
-                        <li>Successfully integrated multiple RESTful APIs and third-party services</li>
-                        <li>Monitored application performance using Azure Application Insights, resolving bottlenecks proactively</li>
-                        <li>Conducted security audits identifying and mitigating SQL injection vulnerabilities through VAPT</li>
-                        <li>Managed workflows using JIRA and Azure DevOps with 95%+ on-time delivery</li>
-                        <li>Mentored junior developers on best practices and code reviews</li>
-                        <li>Delivered high-quality code with 98% coverage and minimal production bugs</li>
+                        <li>Designed and maintained ASP.NET MVC / .NET Core web applications supporting telecom, government, and enterprise clients across 3 years</li>
+                        <li>Engineered complex SQL Server stored procedures, views, and triggers to optimise data retrieval and enforce business logic</li>
+                        <li>Identified and remediated critical security vulnerabilities (SQL injection, XSS) across multiple production applications through VAPT assessments</li>
+                        <li>Integrated RESTful APIs and third-party services into existing web applications, expanding platform capabilities without disrupting live operations</li>
+                        <li>Monitored production website performance and resolved backend bottlenecks, contributing to improved uptime and user experience</li>
+                        <li>Managed tasks and sprint boards in JIRA; delivered features on schedule across concurrent project assignments</li>
+                        <li>Collaborated with cross-functional teams to translate business requirements into scalable technical solutions in an Agile environment</li>
                     </ul>
+                    <div class="timeline-tech">
+                        <span class="tech-tag">ASP.NET MVC</span>
+                        <span class="tech-tag">.NET Core</span>
+                        <span class="tech-tag">Entity Framework</span>
+                        <span class="tech-tag">Blazor</span>
+                        <span class="tech-tag">SQL Server</span>
+                        <span class="tech-tag">jQuery</span>
+                        <span class="tech-tag">Azure Cloud</span>
+                        <span class="tech-tag">JIRA</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -961,15 +1128,40 @@
                 <p>Real-world solutions built with cutting-edge technologies</p>
             </div>
             <div class="projects-grid">
+                <!-- Project 1: OptiWise -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>OptiWise (GTRMS)</h3>
+                        <div class="project-company">GT Bharat LLP · Mobifly</div>
+                    </div>
+                    <div class="project-content">
+                        <p><strong>Impact:</strong> Enterprise-wide resource management for project staffing, capacity planning, and multi-step approval workflows across Dev, UAT, and Production environments.</p>
+                        <p>OptiWise is an enterprise Resource Management System used to plan and track project staffing across the organization. It manages project listings, employee allocations, requisitions, capacity/availability, and multi-step approval workflows. Built as microservices behind an API Gateway with identity integration, WCGT master data sync, and scheduling jobs.</p>
+                        <p><strong>Key Contributions:</strong> Built dedicated microservices for Employee, Allocations, Projects, Skills, Workflow, Notifications, Marketplace & Reports. Implemented PostgreSQL stored procedures for resource availability and budget computation. Integrated Azure Service Bus for async messaging.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">ASP.NET Core</span>
+                            <span class="tech-tag">NestJS</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Web API</span>
+                            <span class="tech-tag">Azure DevOps</span>
+                            <span class="tech-tag">CI/CD</span>
+                            <span class="tech-tag">Microservices</span>
+                            <span class="tech-tag">Azure Service Bus</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2: Blitzz -->
                 <div class="project-card">
                     <div class="project-header">
                         <h3>Blitzz - Enterprise Video Platform</h3>
-                        <div class="project-company">Sculptsoft</div>
+                        <div class="project-company">SculpSoft Pvt. Ltd.</div>
                     </div>
                     <div class="project-content">
-                        <p><strong>Impact:</strong> Serving 500+ enterprise clients across telecom, insurance, banking sectors. Processing 50,000+ video sessions monthly.</p>
-                        <p>Comprehensive remote video collaboration platform enabling seamless virtual assistance through secure video calls, co-browsing, screen sharing, and AI-powered support sessions. Reduced customer support resolution time by 60%.</p>
-                        <p><strong>Key Contributions:</strong> Developed core API modules, integrated Twilio for real-time communication, implemented live transcription, optimized report generation.</p>
+                        <p><strong>Impact:</strong> Serving 500+ enterprise clients across telecom, insurance, and banking sectors. Processing 50,000+ video sessions monthly.</p>
+                        <p>Blitzz is a remote video collaboration and customer support platform enabling seamless virtual assistance through secure video calls, co-browsing, screen sharing, and guided support sessions — without requiring app downloads. Reduced customer support resolution time by 60%.</p>
+                        <p><strong>Key Contributions:</strong> Developed core API modules, integrated Twilio for real-time communication & live transcription, migrated Excel exports from EPPlus to ClosedXML, integrated LogoDev API for branding automation.</p>
                         <div class="tech-stack">
                             <span class="tech-tag">C#</span>
                             <span class="tech-tag">ASP.NET Core</span>
@@ -984,6 +1176,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Project 3: UPN -->
                 <div class="project-card">
                     <div class="project-header">
                         <h3>Unite Private Network (UPN)</h3>
@@ -991,18 +1184,20 @@
                     </div>
                     <div class="project-content">
                         <p><strong>Impact:</strong> Managing fiber-optic infrastructure for 200+ institutions including schools, hospitals, and government agencies.</p>
-                        <p>Mission-critical fiber-optic communications management system with comprehensive service tracking, automated billing, and real-time network monitoring.</p>
+                        <p>Unite Private Networks provides fibre-optic communications infrastructure services to schools, governments, carriers, data centres, hospitals, and enterprise business customers. Mission-critical management system with comprehensive service tracking and real-time network monitoring.</p>
                         <p><strong>Key Contributions:</strong> Developed customer management module, automated billing system, real-time network dashboard.</p>
                         <div class="tech-stack">
                             <span class="tech-tag">ASP.NET MVC</span>
                             <span class="tech-tag">Web Forms</span>
                             <span class="tech-tag">Entity Framework</span>
+                            <span class="tech-tag">Blazor</span>
                             <span class="tech-tag">SQL Server</span>
                             <span class="tech-tag">jQuery</span>
                             <span class="tech-tag">Web API</span>
                         </div>
                     </div>
                 </div>
+                <!-- Project 4: Security Projects -->
                 <div class="project-card">
                     <div class="project-header">
                         <h3>Tool Monitoring | Online Security Deposit | Incident Log</h3>
@@ -1010,7 +1205,7 @@
                     </div>
                     <div class="project-content">
                         <p><strong>Impact:</strong> Protected 15+ enterprise applications, prevented security breaches and ensured compliance.</p>
-                        <p>Three comprehensive security and monitoring projects including Tool Monitoring system, Online Security Deposit management, and Incident Log tracking. Performed VAPT (Vulnerability Assessment and Penetration Testing) across all three systems while also contributing to core development. Conducted thorough security audits, identified critical vulnerabilities, and implemented robust protection mechanisms against cyber threats.</p>
+                        <p>Three comprehensive security and monitoring projects. Performed VAPT (Vulnerability Assessment and Penetration Testing) across all three systems. Identified and mitigated security vulnerabilities including SQL injection and XSS, ensuring robust protection against cyber threats.</p>
                         <p><strong>Key Contributions:</strong> Led VAPT initiatives, developed security monitoring features, implemented automated vulnerability scanning, designed incident management workflows, and created JWT-based authentication across all three applications.</p>
                         <div class="tech-stack">
                             <span class="tech-tag">ASP.NET Core</span>
@@ -1019,10 +1214,27 @@
                             <span class="tech-tag">Entity Framework</span>
                             <span class="tech-tag">Azure Cloud</span>
                             <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">Angular 17</span>
                             <span class="tech-tag">JWT</span>
                             <span class="tech-tag">VAPT</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="container">
+            <div class="section-header">
+                <span class="section-tag">ACADEMIC BACKGROUND</span>
+                <h2>Education</h2>
+                <p>Foundation for building innovative software solutions</p>
+            </div>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">🎓</div>
+                    <h3>Anand Engineering College, Agra</h3>
+                    <div class="education-degree">B.Tech — Computer Science</div>
+                    <div class="education-year">2018 – 2022</div>
                 </div>
             </div>
         </section>
@@ -1032,7 +1244,7 @@
                 <div class="section-header">
                     <span class="section-tag">GET IN TOUCH</span>
                     <h2>Let's Build Something Amazing</h2>
-                    <p>Open to full-time opportunities, freelance projects, and technical collaborations. Let's discuss how I can contribute to your team's success.</p>
+                    <p>Open to full-time opportunities, freelance projects, and technical collaborations. Immediate joiner — let's discuss how I can contribute to your team's success.</p>
                 </div>
                 <div class="contact-info">
                     <div class="contact-item">
@@ -1062,8 +1274,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Shivam Prajapati | .NET Developer | Built with passion ❤️</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Available for new opportunities | Let's connect!</p>
+        <p>&copy; 2026 Shivam Prajapati | Sr. .NET Developer | Built with passion ❤️</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Available for new opportunities · Immediate Joiner · Let's connect!</p>
     </footer>
 
     <script>
@@ -1086,4 +1298,13 @@
                     current = section.getAttribute('id');
                 }
             });
-            document.querySelectorAll('nav a')
+            document.querySelectorAll('nav a').forEach(a => {
+                a.style.color = '';
+                if (a.getAttribute('href') === `#${current}`) {
+                    a.style.color = 'var(--accent-primary)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
